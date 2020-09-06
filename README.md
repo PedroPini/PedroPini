@@ -8,10 +8,6 @@
 🌱 I’m currently learning React <br>
 🏡 Brazilian, Based in Perth, WA - Australia 🌎
 
-### You can find me on
-
-📷 <a href="https://www.instagram.com/pamp178/?hl=en" target="_blank">Instagram</a> <br>
-⚛️ <a href="https://pedropini.me" target="_blank">My site</a> <br>
 
 ### Connect with me:
 
