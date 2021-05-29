@@ -39,12 +39,24 @@
 <br />
 <br />
 
-<details>
-  <summary>:zap: Github Stats</summary>
+### Analytics ⚙️
 
-  <img align="left" alt="codeSTACKr's Github Stats" src="https://github-readme-stats.codestackr.vercel.app/api?username=PedroPini&show_icons=true&hide_border=true" />
+![Github Contributions](https://github-readme-streak-stats.herokuapp.com/?user=PedroPini)
 
-</details>
+<p align="left">
+<a href="https://github.com/PedroPini">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/?username=PedroPini&count_private=true&show_icons=true"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=PedroPini&layout=compact&langs_count=8"/>
+</a>
+</p>
+
+<img width="100%" src="profile-summary-card-output/github/0-profile-details.svg" />
+
+<!-- <p align="center">
+  <img width="36%" src="profile-summary-card-output/github/1-repos-per-language.svg" />
+  <img width="36%" src="profile-summary-card-output/github/2-most-commit-language.svg" />
+  <img width="24.3%" src="profile-summary-card-output/github/3-stats.svg" />
+</p> -->
 <br />
 
 [website]: https://pedropini.com
