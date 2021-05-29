@@ -1,7 +1,6 @@
 <!--
 **PedroPini/PedroPini** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 -->
-![Profile Views](http://estruyf-github.azurewebsites.net/api/VisitorHit?user=PedroPini&repo=PedroPini&countColorcountColor)
 ### <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"> Hello, I'm Pedro!
 
 💻 Software Engineer  at <a href="https://raptortech.com.au" target="_blank">RaptorTech</a> <br>
