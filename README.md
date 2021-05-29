@@ -50,7 +50,6 @@
 </a>
 </p>
 
-<img width="100%" src="profile-summary-card-output/github/0-profile-details.svg" />
 
 ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=PedroPini&theme=vue)
 <br />
