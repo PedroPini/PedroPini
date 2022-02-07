@@ -53,7 +53,7 @@
 ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=PedroPini&theme=vue)
 <br />
 
-[website]: https://pedropini.com
+[website]: https://pedropini.com.br
 [twitter]: https://twitter.com/codeSTACKr
 [youtube]: https://youtube.com/codeSTACKr
 [instagram]: https://instagram.com/pamp178
