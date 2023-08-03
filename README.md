@@ -4,7 +4,6 @@
 ### <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"> Hello, I'm Pedro!
 
 💻 Software Engineer  at <a href="https://raptortech.com.au" target="_blank">RaptorTech</a> <br>
-🌱 I’m currently learning React <br>
 🏡 Brazilian, Based in Perth, WA - Australia 🌎
 
 
