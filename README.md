@@ -40,12 +40,12 @@
 ### Analytics ⚙️
 
 
-![Github Contributions](https://github-readme-streak-stats.herokuapp.com/?user=PedroPini)
+
 
 <p align="left">
 <a href="https://github.com/PedroPini">
-
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=PedroPini&layout=compact&langs_count=8"/>
+<img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=PedroPini" alt="Github Contributions" height="180em"/>
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=PedroPini&layout=compact&langs_count=8"/>
 </a>
 </p>
 
