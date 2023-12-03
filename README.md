@@ -40,7 +40,14 @@
 ### Analytics ⚙️
 
 
+![Github Contributions](https://github-readme-streak-stats.herokuapp.com/?user=PedroPini)
 
+<p align="left">
+<a href="https://github.com/PedroPini">
+
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=PedroPini&layout=compact&langs_count=8"/>
+</a>
+</p>
 
 ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=PedroPini&theme=vue)
 <br />
