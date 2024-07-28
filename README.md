@@ -4,8 +4,8 @@
 ### <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"> Hello, I'm Pedro!
 
 💻 Software Engineer  
-🏡 Brazilian, Based in Perth, WA - Australia 🌎
-<a href="https://pedropini.com" target="_blank">My Website</a> <br>
+🏡 Brazilian, Based in Perth, WA - Australia 🌎 <br>
+<a href="https://pedropini.com" target="_blank">My Website</a> 
 
 ### Connect with me:
 
