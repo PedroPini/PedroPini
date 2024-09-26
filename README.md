@@ -7,12 +7,6 @@
 🏡 Brazilian, Based in Perth, WA - Australia 🌎 <br>
 <a href="https://pedropini.com" target="_blank">My Website</a> 
 
-### Connect with me:
-
-[<img align="left" alt="pedropini.com.br" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]
-[<img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">](http://www.instagram.com/pamp178)
-[<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">](http://www.linkedin.com/in/pedropini)
-
 <br />
 
 ### Languages and Tools:
