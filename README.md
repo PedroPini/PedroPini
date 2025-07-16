@@ -21,7 +21,7 @@
 </a>
 </p>
 
-![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=PedroPini&theme=vue)
+
 <br />
 
 [website]: https://pedropini.com.br
