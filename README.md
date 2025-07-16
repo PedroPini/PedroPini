@@ -9,6 +9,18 @@
 
 <br />
 
+### 🚀 What I’m Up To
+
+- Running experiments with AI and automation for small businesses  
+- Open-sourcing tools I’ve built to solve real-world problems  
+- Sharing code and thoughts on [YouTube](https://youtube.com/@askpedro) and [LinkedIn](https://linkedin.com/in/pedropini)
+
+---
+
+### 🤝 Let’s Connect
+
+Whether you're hiring, looking for collaboration, or just want to geek out over dev tools send me a DM on LinkedIn.
+
 ### Analytics ⚙️
 
 
