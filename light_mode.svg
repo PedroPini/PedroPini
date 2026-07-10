@@ -16,37 +16,53 @@ size-adjust: 109%;
 text, tspan {white-space: pre;}
 </style>
 <rect width="985px" height="530px" fill="#f6f8fa" rx="15"/>
-<text x="15" y="30" fill="#24292f" class="ascii">
-<tspan x="15" y="30"></tspan>
-<tspan x="15" y="50">~-~,...,----.</tspan>
-<tspan x="15" y="70">&amp;oaar;;;;;||:;~,,,,---~,,,.,,,..</tspan>
-<tspan x="15" y="90">*|re||;;;|;;|e|~~----~;~~::;|||;:~~--,</tspan>
-<tspan x="15" y="110">~;rrrr|;:;;:::;::~~-,-~~:;;;:|r;;~~;~~</tspan>
-<tspan x="15" y="130">~:|rrer|;;r|;o&amp;MMWW8ge|:;~:~:::rr;;;;;</tspan>
-<tspan x="15" y="150">rzrrzz;;;;;oM%Bg**am&amp;8MBz:zr|::r|;;||;</tspan>
-<tspan x="15" y="170">zzrz|||rr||mr,        ,e#aegerrr;|r|:~</tspan>
-<tspan x="15" y="190">oeeeeeeezre~.;|~,,,-|r~ :mz*rr|zreer||</tspan>
-<tspan x="15" y="210">mm*aa*ozzez:ea&amp;&amp;e,;&amp;8go| ;ar|zrer|||rz</tspan>
-<tspan x="15" y="230">*m****aoaer,~;|;- ,;;|;~ ;orzrer|rrzzr</tspan>
-<tspan x="15" y="250">gm*m*a**mo;-.~-|*ama;~,.,;;zre|||;r*er</tspan>
-<tspan x="15" y="270">gmg&amp;&amp;ggm*aee;*&amp;*ao**&amp;8r|z|ezzrzerr*are</tspan>
-<tspan x="15" y="290">gg&amp;8&amp;g&amp;&amp;m*g&amp;a|:-|ao:~;z*gmgozeezz*mzez</tspan>
-<tspan x="15" y="310">mmmmaa**mgm8WWBm&amp;8&amp;g*&amp;Bga&amp;g**m*a*&amp;aeez</tspan>
-<tspan x="15" y="330">mgm***m*mg8&amp;e*W@@@@@$M*-zMmm&amp;gg&amp;88*aee</tspan>
-<tspan x="15" y="350">*mm**aggmg&amp;g; ,;z**e|-. ;ma&amp;8&amp;g8*gggmg</tspan>
-<tspan x="15" y="370">amg&amp;gmgg&amp;8MWger;;;:~~|zaB%WWB8B8g&amp;mm&amp;&amp;</tspan>
-<tspan x="15" y="390">g8B%#%%%%%%#$@$$$$#%#$@@$%%###$%W%B8&amp;g</tspan>
-<tspan x="15" y="410">W##$$$$#$#%%%%########%######$$#W#$%%W</tspan>
-<tspan x="15" y="430">@#%##@%$$#%##############$$$##@##W#%#@</tspan>
-<tspan x="15" y="450">@##$@##$$####$$$##########$$$##$####$@</tspan>
-<tspan x="15" y="470">@$$@$#$####$$$#$$#$$$$######$$$$#$#$@@</tspan>
-<tspan x="15" y="490">@@@@@$$$$$$$$$$$$$$$$$$$$$$$$$$@@#@@@@</tspan>
-<tspan x="15" y="510">@@$$$$$############$$$##########$$#@@@</tspan>
+<text x="15" y="24" fill="#24292f" class="ascii" font-size="10px">
+<tspan x="15" y="24">                 .~:;;|rrrrr|;~-.</tspan>
+<tspan x="15" y="36">               ~eg8BMWMW%#%#W&amp;8gaz~</tspan>
+<tspan x="15" y="48">             :*MW#@@@@@@@@@@@@@@#Mm*e,</tspan>
+<tspan x="15" y="60">           ,agM#@@#W8g**mmao*&amp;BM#@$WWWa,</tspan>
+<tspan x="15" y="72">           eBW%B*r:-,,,,,,,,..--~|eg8#@Wz</tspan>
+<tspan x="15" y="84">          -W#a;~.,-----------,,,,...,r8@@&amp;.</tspan>
+<tspan x="15" y="96">          gW~ .,-----,,,--,,,,----,,. .o#@B</tspan>
+<tspan x="15" y="108">         r8- -------,,--------------,,. rW@|</tspan>
+<tspan x="15" y="120">        ,8: --,,,,,,,,,--,,,----,,,-,,-, ;M8</tspan>
+<tspan x="15" y="132">        zo -.,:;;;:-,,,,,,,,,,,~:;|;~-....zB~</tspan>
+<tspan x="15" y="144">        m:,;zom&amp;MWB*z;~~--~~~ra8%#%8*e|:..,*|</tspan>
+<tspan x="15" y="156">       ,*,:r|:---;og&amp;ge;--:|aBM&amp;e;~~~;|;,, |z</tspan>
+<tspan x="15" y="168">       ~a.:;;ooz*mooama~,,-|gg*zoaorz|~~,..;o</tspan>
+<tspan x="15" y="180">       |*,~;o*z|g&amp;oze|;-,,.:zzo|mM&amp;e*ge:,..rg</tspan>
+<tspan x="15" y="192">      ,ra,,,.,~~~:;:~~-,,,,,~:~;:~~:-,--,, ea~.</tspan>
+<tspan x="15" y="204">      ee;,..,,,,--,,,....,,  .,,,--,,,,,,,.;;o.</tspan>
+<tspan x="15" y="216">      ,;e~-,,,,.,-~~;ee|:~:o*o:;~,......,.~z,</tspan>
+<tspan x="15" y="228">       ,a;~~---:r|~-e&amp;g&amp;&amp;8mggge|zz:----,,,ro|</tspan>
+<tspan x="15" y="240">       .:e:;::ror;||rog888WM8oe|;ree|;;;:~o-:.</tspan>
+<tspan x="15" y="252">        :m|||:zm8W%g&amp;B*r|;emm&amp;*&amp;%Mmer||r;er -</tspan>
+<tspan x="15" y="264">        ~Berr:~a8B*o|:--~:~--~|*8WWa~;rzra: .</tspan>
+<tspan x="15" y="276">         gmeor;:~-,~:||rzzzrr|:--~:;;roorg|</tspan>
+<tspan x="15" y="288">         -Baaaz|~-~::zag88&amp;g*r::~-::z*aeag,</tspan>
+<tspan x="15" y="300">          |%maezzz;~-,~ea*ozr----|r;ome*M:</tspan>
+<tspan x="15" y="312">           |$W8a*go||eoaoore*zezramzam&amp;Mz</tspan>
+<tspan x="15" y="324">            :%@WMWMg88Bgm8&amp;g&amp;g&amp;&amp;*&amp;&amp;m8B8r,</tspan>
+<tspan x="15" y="336">             ~&amp;@@@$$#W%%%W#WMMBMWB%#M*|--</tspan>
+<tspan x="15" y="348">             ~:zg%@@@@@@@$@$@$$@@%Mme:~~-</tspan>
+<tspan x="15" y="360">             ~:~:ra&amp;M%$$@@@$$#W&amp;*or;:~~-,z;.</tspan>
+<tspan x="15" y="372">            ;:~~:::;rea*g&amp;g*aozrr|;:~~-- |%e~</tspan>
+<tspan x="15" y="384">          -a8-~~~~~::;||zoezr||;;:~~----,:&amp;az|~-.</tspan>
+<tspan x="15" y="396">        :a*g| ~~~~~~~:::;;;;;::~~~~~~~-,.rga*m&amp;&amp;&amp;e-</tspan>
+<tspan x="15" y="408">     ,;o8BBBm;-.,,,,,-~~~:::::~~~--,,,-:z8MBB88&amp;88&amp;azrz*er-</tspan>
+<tspan x="15" y="420">za*e*&amp;88&amp;&amp;BMW%M&amp;mozr;::~~~--,,.,-:;z*8W%#%MBB8BB888&amp;8%g#8&amp;&amp;m</tspan>
+<tspan x="15" y="432">a%B8B&amp;888888BBMW%%%%%%%%WM8gg&amp;g8MW%##%WMBBBBB8BMBBB8&amp;%g%B&amp;&amp;g</tspan>
+<tspan x="15" y="444">B%gMB&amp;8BBBBMBBBBBBBBMMWWWWW%%%%WWMMBBBBMBMBB8BBBBMBB8W8M%88&amp;</tspan>
+<tspan x="15" y="456">$BBMM88BBBBBBBMMMBMBMBMMMMMMMMMMMMMMMBBBBBBBBBBBBMBBBW%&amp;$888</tspan>
+<tspan x="15" y="468">BBMWMBBBBBBBBBBBMMBMBMMBBBBBBBBBBBBBBBBBBBBBBBBBBBMMBM$g%M88</tspan>
+<tspan x="15" y="480">BBMWMMBBBBBBBBBBBBBBBMBBBBBBBBBBMBMMBMMMMMBBMBBMBBBMMM#W&amp;$88</tspan>
+<tspan x="15" y="492">BMWWMBBBBBBBBBBBBBMMMMBBBBBBBBMMMBBMMMMMMMMMMMMMMMBBBMW@g%W8</tspan>
+<tspan x="15" y="504">BMMWMBBBBBBMBBBMMMBBMMBBBBBBBBMBMMBBMMMMMMMMMMMMMMBBBMW$Wg$B</tspan>
 </text>
 <text x="390" y="30" fill="#24292f">
 <tspan x="390" y="30">pedro@pini</tspan> -—————————————————————————————————————————————-—-
 <tspan x="390" y="50" class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> ......................................... </tspan><tspan class="value">macOS, Linux</tspan>
-<tspan x="390" y="70" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc" id="age_data_dots"> ....................... </tspan><tspan class="value" id="age_data">31 years, 6 months, 9 days</tspan>
+<tspan x="390" y="70" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc" id="age_data_dots"> ......................................... </tspan><tspan class="value" id="age_data">31 years</tspan>
 <tspan x="390" y="90" class="cc">. </tspan><tspan class="key">Host</tspan>:<tspan class="cc"> ........................... </tspan><tspan class="value">Perth, Western Australia</tspan>
 <tspan x="390" y="110" class="cc">. </tspan><tspan class="key">Kernel</tspan>:<tspan class="cc"> ................................ </tspan><tspan class="value">Software Engineer</tspan>
 <tspan x="390" y="130" class="cc">. </tspan><tspan class="key">IDE</tspan>:<tspan class="cc"> ................................... </tspan><tspan class="value">Kiro, Antigravity</tspan>

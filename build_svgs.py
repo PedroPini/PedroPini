@@ -10,22 +10,50 @@ Values must be short enough that each line fits in 60 characters;
 the script errors out if a line is too long.
 """
 import os
-from PIL import Image, ImageEnhance, ImageOps
+from PIL import Image, ImageEnhance, ImageFilter, ImageOps
 from xml.sax.saxutils import escape
 
 OUT_DIR = os.path.dirname(os.path.abspath(__file__))
-AVATAR = os.path.join(OUT_DIR, "avatar.png")
-ROWS, COLS = 25, 38
-CELL_ASPECT = 20 / 8.8
+# avatar_cutout.png = avatar with background removed (RGBA); falls back to the raw avatar
+AVATAR = os.path.join(OUT_DIR, "avatar_cutout.png")
+if not os.path.exists(AVATAR):
+    AVATAR = os.path.join(OUT_DIR, "avatar.png")
+# the portrait uses a smaller font than the info column for ~2x resolution
+ART_FONT_PX, ART_Y0, ART_DY = 10, 24, 12
+ROWS, COLS = 41, 60
+CELL_ASPECT = 2.0  # line height 12px / char advance ~6px at 10px Consolas
 RAMP_LIGHT = "@$#%WMB8&gm*aoezr|;:~-,. "
 RAMP_DARK = RAMP_LIGHT[::-1]
 WIDTH = 60  # visible chars per info line, same as Andrew's
 
 
-def ascii_lines(ramp):
-    img = Image.open(AVATAR).convert("L")
-    img = ImageOps.autocontrast(img, cutoff=2)
-    img = ImageEnhance.Contrast(img).enhance(1.15)
+HEAD_CROP = 0.78  # keep the top 78% of the subject: head and upper chest
+
+
+def percentile(values, q):
+    values = sorted(values)
+    return values[int(q * (len(values) - 1))]
+
+
+def ascii_lines(ramp, art_bg):
+    img = Image.open(AVATAR)
+    if img.mode == "RGBA":
+        img = img.crop(img.split()[3].getbbox())  # trim empty margins
+        w, h = img.size
+        img = img.crop((0, 0, w, int(h * HEAD_CROP)))
+        gray, a = img.convert("L"), img.split()[3]
+        # stretch tones using only subject pixels, so features get the full ramp,
+        # but clamp to [12, 235] so the subject never blends into the blank background
+        subject = [p for p, m in zip(gray.getdata(), a.getdata()) if m > 128]
+        lo, hi = percentile(subject, 0.02), percentile(subject, 0.98)
+        gray = gray.point(lambda v: max(12, min(235, 12 + (v - lo) * 223 // max(1, hi - lo))))
+        img = Image.new("L", img.size, art_bg)
+        img.paste(gray, mask=a)
+    else:
+        img = img.convert("L")
+        img = ImageOps.autocontrast(img, cutoff=2)
+        img = ImageEnhance.Contrast(img).enhance(1.15)
+    img = img.filter(ImageFilter.UnsharpMask(radius=2, percent=100))
     w, h = img.size
     needed_w = int(h * (COLS / (ROWS * CELL_ASPECT)))
     if needed_w < w:
@@ -108,13 +136,13 @@ def stat_lines():
 
 THEMES = {
     "light_mode.svg": {
-        "ramp": RAMP_LIGHT,
+        "ramp": RAMP_LIGHT, "art_bg": 255,
         "bg": "#f6f8fa", "fg": "#24292f",
         "key": "#953800", "value": "#0a3069",
         "add": "#1a7f37", "del": "#cf222e", "cc": "#c2cfde",
     },
     "dark_mode.svg": {
-        "ramp": RAMP_DARK,
+        "ramp": RAMP_DARK, "art_bg": 0,
         "bg": "#161b22", "fg": "#c9d1d9",
         "key": "#ffa657", "value": "#a5d6ff",
         "add": "#3fb950", "del": "#f85149", "cc": "#616e7f",
@@ -128,13 +156,13 @@ STATS_DASHES = "-—————————————————————
 
 for filename, t in THEMES.items():
     art = "\n".join(
-        f'<tspan x="15" y="{30 + i * 20}">{escape(line)}</tspan>'
-        for i, line in enumerate(ascii_lines(t["ramp"]))
+        f'<tspan x="15" y="{ART_Y0 + i * ART_DY}">{escape(line)}</tspan>'
+        for i, line in enumerate(ascii_lines(t["ramp"], t["art_bg"]))
     )
     info = [
         header_line(30, "pedro@pini", NAME_DASHES),
         info_line(50, "OS", "macOS, Linux"),
-        info_line(70, "Uptime", "31 years, 6 months, 9 days", "age_data_dots", "age_data"),
+        info_line(70, "Uptime", "31 years", "age_data_dots", "age_data"),
         info_line(90, "Host", "Perth, Western Australia"),
         info_line(110, "Kernel", "Software Engineer"),
         info_line(130, "IDE", "Kiro, Antigravity"),
@@ -171,7 +199,7 @@ size-adjust: 109%;
 text, tspan {{white-space: pre;}}
 </style>
 <rect width="985px" height="530px" fill="{t["bg"]}" rx="15"/>
-<text x="15" y="30" fill="{t["fg"]}" class="ascii">
+<text x="15" y="{ART_Y0}" fill="{t["fg"]}" class="ascii" font-size="{ART_FONT_PX}px">
 {art}
 </text>
 <text x="390" y="30" fill="{t["fg"]}">
