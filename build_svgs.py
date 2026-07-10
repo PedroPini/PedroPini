@@ -93,7 +93,8 @@ def blank_line(y):
     return f'<tspan x="390" y="{y}" class="cc">. </tspan>'
 
 
-def header_line(y, text, dashes):
+def header_line(y, text):
+    dashes = "-" + "—" * (WIDTH - 5 - len(text)) + "-—-"
     return f'<tspan x="390" y="{y}">{escape(text)}</tspan> {dashes}'
 
 
@@ -149,18 +150,13 @@ THEMES = {
     },
 }
 
-# name header is 2 chars shorter than andrew@grant, so 2 extra em-dashes
-NAME_DASHES = "-—————————————————————————————————————————————-—-"
-CONTACT_DASHES = "-——————————————————————————————————————————————-—-"
-STATS_DASHES = "-—————————————————————————————————————————-—-"
-
 for filename, t in THEMES.items():
     art = "\n".join(
         f'<tspan x="15" y="{ART_Y0 + i * ART_DY}">{escape(line)}</tspan>'
         for i, line in enumerate(ascii_lines(t["ramp"], t["art_bg"]))
     )
     info = [
-        header_line(30, "pedro@pini", NAME_DASHES),
+        header_line(30, "pedropini"),
         info_line(50, "OS", "macOS, Linux"),
         info_line(70, "Uptime", "31 years", "age_data_dots", "age_data"),
         info_line(90, "Host", "Perth, Western Australia"),
@@ -168,17 +164,17 @@ for filename, t in THEMES.items():
         info_line(130, "IDE", "Kiro, Antigravity"),
         blank_line(150),
         info_line(170, "Languages.Programming", "JavaScript, TypeScript, Python"),
-        info_line(190, "Languages.Computer", "Next.js, CSS, SQL, JSON, YAML"),
+        info_line(190, "Languages.Computer", "NEXT JS, CSS, SQL, JSON, YAML"),
         info_line(210, "Languages.Real", "Portuguese, English"),
         blank_line(230),
         info_line(250, "Hobbies.Software", "AI & Automation Experiments"),
         info_line(270, "Hobbies.Content", "YouTube (@askpedro)"),
-        header_line(310, "- Contact", CONTACT_DASHES),
+        header_line(310, "- Contact"),
         info_line(330, "Email.Personal", "pedropini.tech@gmail.com"),
         info_line(350, "Website", "pedropini.com"),
         info_line(370, "LinkedIn", "pedropini"),
         info_line(390, "YouTube", "@askpedro"),
-        header_line(450, "- GitHub Stats", STATS_DASHES),
+        header_line(450, "- GitHub Stats"),
         *stat_lines(),
     ]
     svg = f"""<?xml version='1.0' encoding='UTF-8'?>
