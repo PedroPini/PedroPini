@@ -140,11 +140,21 @@ def recursive_loc(owner, repo_name, data, cache_comment, addition_total=0, delet
         }
     }'''
     variables = {'repo_name': repo_name, 'owner': owner, 'cursor': cursor}
-    request = requests.post('https://api.github.com/graphql', json={'query': query, 'variables':variables}, headers=HEADERS) # I cannot use simple_request(), because I want to save the file before raising Exception
-    if request.status_code == 200:
-        if request.json()['data']['repository']['defaultBranchRef'] != None: # Only count commits if repo isn't empty
-            return loc_counter_one_repo(owner, repo_name, data, cache_comment, request.json()['data']['repository']['defaultBranchRef']['target']['history'], addition_total, deletion_total, my_commits)
-        else: return 0
+    for attempt in range(6): # retry transient API failures (empty 200 bodies, 5xx) with backoff
+        request = requests.post('https://api.github.com/graphql', json={'query': query, 'variables':variables}, headers=HEADERS) # I cannot use simple_request(), because I want to save the file before raising Exception
+        if request.status_code == 200:
+            try:
+                repository = request.json()['data']['repository']
+            except requests.exceptions.JSONDecodeError: # GitHub occasionally returns 200 with an empty body under load
+                time.sleep(2 ** attempt)
+                continue
+            if repository['defaultBranchRef'] != None: # Only count commits if repo isn't empty
+                return loc_counter_one_repo(owner, repo_name, data, cache_comment, repository['defaultBranchRef']['target']['history'], addition_total, deletion_total, my_commits)
+            else: return 0
+        if request.status_code in (502, 503, 504):
+            time.sleep(2 ** attempt)
+            continue
+        break
     force_close_file(data, cache_comment) # saves what is currently in the file before this program crashes
     if request.status_code == 403:
         raise Exception('Too many requests in a short amount of time!\nYou\'ve hit the non-documented anti-abuse limit!')
