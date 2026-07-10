@@ -428,9 +428,8 @@ if __name__ == '__main__':
     user_data, user_time = perf_counter(user_getter, USER_NAME)
     OWNER_ID, acc_date = user_data
     formatter('account data', user_time)
-    # 'Uptime' = time since the GitHub account was created.
-    # To show your real age instead, replace with e.g. datetime.datetime(1995, 1, 31)
-    age_data, age_time = perf_counter(daily_readme, datetime.datetime.strptime(acc_date, '%Y-%m-%dT%H:%M:%SZ'))
+    # 'Uptime' = age since birth year (Jan 1 assumed — add the real month/day for exact age)
+    age_data, age_time = perf_counter(daily_readme, datetime.datetime(1995, 1, 1))
     formatter('age calculation', age_time)
     total_loc, loc_time = perf_counter(loc_query, ['OWNER', 'COLLABORATOR', 'ORGANIZATION_MEMBER'], 7)
     formatter('LOC (cached)', loc_time) if total_loc[-1] else formatter('LOC (no cache)', loc_time)
