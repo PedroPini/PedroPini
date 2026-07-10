@@ -427,7 +427,9 @@ if __name__ == '__main__':
     # 'Uptime' = age since birth year (Jan 1 assumed — add the real month/day for exact age)
     age_data, age_time = perf_counter(daily_readme, datetime.datetime(1995, 1, 1))
     formatter('age calculation', age_time)
-    total_loc, loc_time = perf_counter(loc_query, ['OWNER', 'COLLABORATOR', 'ORGANIZATION_MEMBER'], 7)
+    # OWNER only: the fine-grained PAT can't read commit history of repos owned
+    # by other users/orgs (the API returns 401 Bad credentials for those)
+    total_loc, loc_time = perf_counter(loc_query, ['OWNER'], 7)
     formatter('LOC (cached)', loc_time) if total_loc[-1] else formatter('LOC (no cache)', loc_time)
     commit_data, commit_time = perf_counter(commit_counter, 7)
     star_data, star_time = perf_counter(graph_repos_stars, 'stars', ['OWNER'])
